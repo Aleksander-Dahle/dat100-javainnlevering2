@@ -6,35 +6,58 @@ public class Tabeller {
 	public static void skrivUt(int[] tabell) {
 
 		if (tabell.length == 0) {
-            System.out.println("Array is empty");
-        } else {
-            for (int i = 0; i < tabell.length; i++) {
-                System.out.println(tabell[i]);
-            }
-        }
+			System.out.println("Array is empty");
+		} else {
+			for (int i = 0; i < tabell.length; i++) {
+				System.out.println(tabell[i]);
+			}
+		}
 
 	}
 
 	// b)
 	public static String tilStreng(int[] tabell) {
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden tilStreng ikke implementert");
+		StringBuilder toString = new StringBuilder("[");
+
+		for (int i = 0; i < tabell.length; i++) {
+			toString.append(tabell[i]);
+
+			if (i < tabell.length - 1) {
+				toString.append(",");
+			}
+		}
+
+		toString.append("]");
+
+		return toString.toString();
+
 	}
 
 	// c)
 	public static int summer(int[] tabell) {
+		int sum = 0;
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden summer ikke implementert");
+		for (int i = 0; i < tabell.length; i++) {
+			sum += tabell[i];
+
+		}
+		return sum;
+
 	}
 
 	// d)
 	public static boolean finnesTall(int[] tabell, int tall) {
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden finnesTall ikke implementert");
+		for (int i = 0; i < tabell.length; i++) {
+			if (tabell[i] == tall) {
 
+				return true;
+
+			}
+
+		}
+		return false;
 	}
 
 	// e)
