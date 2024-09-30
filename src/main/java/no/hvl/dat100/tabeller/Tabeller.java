@@ -5,8 +5,13 @@ public class Tabeller {
 	// a)
 	public static void skrivUt(int[] tabell) {
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden skrivUt ikke implementert");
+		if (tabell.length == 0) {
+            System.out.println("Array is empty");
+        } else {
+            for (int i = 0; i < tabell.length; i++) {
+                System.out.println(tabell[i]);
+            }
+        }
 
 	}
 
